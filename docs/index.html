@@ -1,11 +1,104 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>My Site</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shotaro Yagi – Portfolio</title>
+  <meta name="description" content="Projects, research, and writing by Shotaro Yagi." />
+  <!-- Open Graph for nicer link previews -->
+  <meta property="og:title" content="Shotaro Yagi – Portfolio" />
+  <meta property="og:description" content="Projects, research, and writing." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/og.jpg" /> <!-- optional -->
+  <link rel="icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Hello, Pages</h1>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <img src="images/headshot.jpg" alt="Portrait of Shotaro Yagi" class="avatar" />
+        <div>
+          <h1>Shotaro Yagi</h1>
+          <p class="sub">Research · Project Design · Writing</p>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#projects">Projects</a>
+        <a href="#research">Research</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="btn">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="intro" class="intro">
+      <p><!-- TODO: 2–3 lines about you. --> I work at the intersection of project design, systems theory, and practice. Below is a selection of work.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Selected Projects</h2>
+      <div class="grid">
+        <!-- Repeat .card blocks per project -->
+        <article class="card">
+          <a class="card-link" href="https://example.com/project-1" target="_blank" rel="noopener">
+            <img src="images/project1.jpg" alt="Screenshot of Project 1" loading="lazy" />
+            <div class="card-body">
+              <h3>Project Sprint – Method & Workshop</h3>
+              <p>Practice-driven project OS for teams; facilitation toolkit and training.</p>
+              <ul class="meta"><li>2024–2025</li><li>Role: Lead</li></ul>
+            </div>
+          </a>
+        </article>
+
+        <article class="card">
+          <a class="card-link" href="https://example.com/project-2" target="_blank" rel="noopener">
+            <img src="images/project2.jpg" alt="Screenshot of Research Article" loading="lazy" />
+            <div class="card-body">
+              <h3>Article: Resonance & Projects</h3>
+              <p>How resonance becomes structure; bridging Barad and Luhmann.</p>
+              <ul class="meta"><li>Journal preprint</li><li>2025</li></ul>
+            </div>
+          </a>
+        </article>
+        <!-- Add more cards as needed -->
+      </div>
+    </section>
+
+    <section id="research">
+      <h2>Research & Writing</h2>
+      <ul class="list">
+        <li><a href="https://example.com/paper-1">Rouse, Barad, Luhmann: Practices as Cuts</a> — working paper, 2025.</li>
+        <li><a href="https://example.com/zettels">Reading notes & Zettels</a> — living index.</li>
+        <li><a href="https://example.com/talk">Talk: Projects as Devices</a> — slides & abstract.</li>
+      </ul>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <p><!-- TODO: short bio --> PhD candidate and practitioner; building convivial project practices and teaching through workshops.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <ul class="list">
+        <li>Email: <a href="mailto:you@example.com">you@example.com</a></li>
+        <li>GitHub: <a href="https://github.com/shotaro8yagi">@shotaro8yagi</a></li>
+        <li>LinkedIn: <a href="https://linkedin.com/in/yourname">Your Name</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Shotaro Yagi. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script>
+    // tiny enhancement: set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
