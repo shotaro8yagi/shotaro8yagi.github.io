@@ -23,6 +23,9 @@ p{ margin:0 0 12px; color:var(--text); }
 .brand{ display:flex; gap:16px; align-items:center; }
 .avatar{ width:56px; height:56px; border-radius:50%; object-fit:cover; }
 
+.headshot{ width:150px; border-radius:50%; object-fit:cover; }
+
+
 .nav{ display:flex; gap:16px; align-items:center; }
 .nav a{ color:var(--text); text-decoration:none; opacity:.9; }
 .nav a:hover{ color:var(--accent); }
@@ -113,4 +116,14 @@ h2{ border-bottom:1px solid color-mix(in oklab, var(--text), transparent 85%); p
 @media (max-width: 720px){
   .split{ grid-template-columns: 1fr; gap: 8px; }
   .split-label h2{ font-size:1.1rem; }
+}
+
+a {
+  color: #7fff7f;             /* light green that reads well on dark bg */
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+a:hover {
+  color: #aaffaa;             /* slightly brighter on hover */
 }
