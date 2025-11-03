@@ -77,12 +77,17 @@ h2{ border-bottom:1px solid color-mix(in oklab, var(--text), transparent 85%); p
 /* Ensure split-body text fully wraps and never truncates */
 .split-body {
   max-width: 720px;
+  min-width: 0;
   white-space: normal;     /* allow multi-line wrapping */
   overflow: visible;       /* show full content, no clipping */
   text-overflow: unset;    /* disable "..." truncation */
 }
 .split-body p{
     margin: 0 0 16px; 
+    white-space: normal;          /* allow wrapping */
+    overflow: visible;            /* don’t clip */
+    text-overflow: clip;          /* no "..." */
+}
 
 /* Button */
 .btn-cta{
