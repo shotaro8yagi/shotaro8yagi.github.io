@@ -50,3 +50,7 @@ p{ margin:0 0 12px; color:var(--text); }
 .list li{ margin:6px 0; }
 
 .site-footer{ border-top:1px solid color-mix(in oklab, var(--text), transparent 90%); margin-top:40px; }
+
+section p{ max-width:720px; }
+section + section{ margin-top:48px; }
+h2{ border-bottom:1px solid color-mix(in oklab, var(--text), transparent 85%); padding-bottom:4px; }
