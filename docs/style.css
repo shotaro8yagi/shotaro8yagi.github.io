@@ -54,3 +54,51 @@ p{ margin:0 0 12px; color:var(--text); }
 section p{ max-width:720px; }
 section + section{ margin-top:48px; }
 h2{ border-bottom:1px solid color-mix(in oklab, var(--text), transparent 85%); padding-bottom:4px; }
+
+/* Left label / right content layout */
+.split{
+  display:grid;
+  grid-template-columns: 220px 1fr;
+  gap: 24px;
+  align-items:start;
+  padding-block: 36px;
+  border-top:1px solid color-mix(in oklab, var(--text), transparent 90%);
+}
+.split:first-of-type{ border-top:none; }
+
+/* Left subtitle column */
+.split-label h2{
+  margin:0;
+  font-size:1.25rem;
+  font-weight:700;
+}
+
+/* Right content column */
+.split-body{ max-width: 720px; }
+.split-body p{ margin: 0 0 16px; }
+
+/* Button */
+.btn-cta{
+  display:inline-block;
+  padding:14px 22px;
+  border-radius:12px;
+  border:1px solid color-mix(in oklab, var(--text), transparent 80%);
+  background:#fff0;             /* transparent, works for dark/light */
+  color:var(--text);
+  text-decoration:none;
+  transition:transform .08s ease, border-color .2s, background .2s;
+}
+@media (prefers-color-scheme: light){
+  .btn-cta{ background:#fff; }
+}
+.btn-cta:hover{
+  transform:translateY(-1px);
+  border-color:color-mix(in oklab, var(--text), transparent 65%);
+  background:color-mix(in oklab, var(--card), #ffffff 10%);
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 720px){
+  .split{ grid-template-columns: 1fr; gap: 8px; }
+  .split-label h2{ font-size:1.1rem; }
+}
