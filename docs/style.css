@@ -58,7 +58,7 @@ h2{ border-bottom:1px solid color-mix(in oklab, var(--text), transparent 85%); p
 /* Left label / right content layout */
 .split{
   display:grid;
-  grid-template-columns: 220px 1fr;
+  grid-template-columns: 220px minmax(0, 1fr);
   gap: 24px;
   align-items:start;
   padding-block: 36px;
@@ -74,7 +74,13 @@ h2{ border-bottom:1px solid color-mix(in oklab, var(--text), transparent 85%); p
 }
 
 /* Right content column */
-.split-body{ max-width: 720px; }
+/* Ensure split-body text fully wraps and never truncates */
+.split-body {
+  max-width: 720px;
+  white-space: normal;     /* allow multi-line wrapping */
+  overflow: visible;       /* show full content, no clipping */
+  text-overflow: unset;    /* disable "..." truncation */
+}
 .split-body p{ margin: 0 0 16px; }
 
 /* Button */
