@@ -132,3 +132,8 @@ a {
 a:hover {
   color: #aaffaa;             /* slightly brighter on hover */
 }
+
+:root { --header-h: 100px !important; }  /* EXAGGERATED on purpose */
+section[id]:target { outline: 3px solid lime !important; }
+section[id] { scroll-margin-top: var(--header-h) !important; }
+html { scroll-padding-top: var(--header-h) !important; }
