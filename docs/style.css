@@ -133,7 +133,50 @@ a:hover {
   color: #aaffaa;             /* slightly brighter on hover */
 }
 
-:root { --header-h: 100px !important; }  /* EXAGGERATED on purpose */
-section[id]:target { outline: 3px solid lime !important; }
-section[id] { scroll-margin-top: var(--header-h) !important; }
-html { scroll-padding-top: var(--header-h) !important; }
+:root {
+  --header-h: 90px !important;  /* tweak this value until it feels right */
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-h) !important;
+}
+
+/* All sections that are anchor targets get offset */
+section[id] {
+  scroll-margin-top: var(--header-h) !important;
+}
+
+/* Remove hyperlink look from the brand name */
+.brand-link {
+  text-decoration: none !important;
+  color: var(--text) !important;
+  opacity: 0.95;
+}
+
+/* Make it feel like navigation (same hover vibe) */
+.brand-link:hover {
+  color: var(--accent);
+  opacity: 1;
+}
+
+.contact-icons {
+  display: flex;
+  gap: 24px;
+  margin-top: 12px;
+  align-items: center;
+}
+
+.contact-icon img {
+  width: 36px;        /* adjust size here */
+  height: 36px;
+  object-fit: contain;
+  opacity: 0.85;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.contact-icon:hover img {
+  opacity: 1;
+  transform: translateY(-2px); /* small hover lift */
+  filter: drop-shadow(0 0 6px var(--accent));
+}

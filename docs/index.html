@@ -31,12 +31,14 @@
     new ResizeObserver(updateHeaderHeight).observe(header);
   }
 </script>
-<body>
+<body id="top">
   <header class="site-header">
     <div class="container">
       <div class="brand">
         <div>
-          <h1>Shotaro Yagi</h1>
+          <a href="#top" class="brand-link">
+            <h1>Shotaro Yagi</h1>
+          </a>
           <p class="sub">Research · Project Design · Writing</p>
         </div>
       </div>
@@ -59,7 +61,7 @@
     <section class="split">
         <aside class="split-label"><img src="images/profile_yagi.png" alt="Portrait of Shotaro Yagi" class="headshot" /></aside>
         <div class="split-body">
-            <p>Hello! I’m a Practice Designer working as a project manager with <a href="https://www.copilot.jp/"><strong>COPILOT Inc. Tokyo</strong></a> and a PhD Candidate at the <a href="https://www.iii.u-tokyo.ac.jp/"><strong>Graduate School of Interdisciplinary Information Studies, University of Tokyo</strong></a>. I also give lectures, talks, and consult on project management. I’m always happy to connect with new friends and collaborators!</p>
+            <p>Hello! I’m a Practice Designer working as a project manager with <a href="https://www.copilot.jp/"><strong>COPILOT Inc.</strong></a> Tokyo and a PhD Candidate at the <a href="https://www.iii.u-tokyo.ac.jp/"><strong>University of Tokyo</strong></a>. I also give lectures, talks, and consult on project management.</p>
             <p>I’m currently based in <strong>Glasgow, UK</strong>.</p>
         </div>
     </section>
@@ -67,10 +69,10 @@
     <section class="split"  id="research">
         <aside class="split-label"><h2>Research</h2></aside>
         <div class="split-body">
-            <p>I study project management from various sociological and philosophical perspectives including practice theory, new pragmatism, social systems theory, network theory, and ontology. I do this not only theoretically, but also empirically through ethnography and statistical data analysis.</p>
+            <p>I study project management from sociological perspectives including practice theory, new pragmatism, social systems theory, network theory, and ontology. I do this not only theoretically, but also empirically through ethnography and statistical data analysis.</p>
 
-            <a class="btn-cta" href="teaching.html">
-            Research
+            <a class="btn-cta" href="https://ptp.voyage/">
+            Project Theory Probe
             </a>
         </div>
     </section>
@@ -78,7 +80,7 @@
     <section class="split">
         <aside class="split-label"><h2>Interests</h2></aside>
         <div class="split-body">
-            <p>Project as practice, Agile, Open Source Software, Symbiosis, Autopoiesis, Post-Human, New Materialism, Object Oriented Ontology, Theory of Constraints, Design Theory, Visual Thinking Strategy, Science & Technology Studies, Collective Intelligence.</p>
+            <p>These are the keywords that I am interested in: Project as practice, Agile, Open Source Software, Symbiosis, Autopoiesis, Post-Human, New Materialism, Object Oriented Ontology, Theory of Constraints, Design Theory, Visual Thinking Strategy, Science & Technology Studies, Collective Intelligence, Embodied Learning.</p>
 
             <a class="btn-cta" href="teaching.html">
             Interests
@@ -89,8 +91,8 @@
     <section class="split" id="work">
         <aside class="split-label"><h2>Work</h2></aside>
         <div class="split-body">
-            <p>I design how people work together — or should I say <em>in-sign</em> — creating practices as we practice. Projects are not just containers for work; they are living ecologies of people, artifacts, and environments. I help teams and organizations reimagine how they collaborate.</p>
-            <p>I often engage in new product and business development, R&D, workshop design, organizational development, and delivering event and fellowship experiences.</p>
+            <p>I facilitate people to collaborate better —creating practices as we practice. Projects are not just containers for work; they are living dyanamics of people, artifacts, and environments.</p>
+            <p>I often engage in new product and business development, workshop design, organizational development, and delivering event and fellowship experiences.</p>
             <p><strong>Previous clients:</strong> SKword, Lion Corporation, The Institute of Science Tokyo, Google News Lab, NTT West, Toyota Connected, Eisenhower Fellowship (US).<br>
             <strong>Pro-bono:</strong> Supported starting-up <em>Usagi-no-mimi</em> (life nursing care and child welfare business).</p>
             <p><em>Contact me to discuss your project and where I might fit in!</em></p>
@@ -140,17 +142,27 @@
     </section>
 
         
-    <section id="projects">
-      <h2>Selected Projects</h2>
-      <div class="grid">
-        <!-- Repeat .card blocks per project -->
+        <article class="card">
+          <a class="card-link" href="project-skword.html">
+            <img src="images/project-skword-1.jpeg" alt="Workshop and collaboration with SKword team" loading="lazy" />
+            <div class="card-body">
+              <h3>Organizational Development (SKword)</h3>
+              <p>Transforming project practices in a 70-person creative design firm.</p>
+              <ul class="meta">
+                <li>2022–2025 (ongoing)</li>
+                <li>Lead Producer / Project Coach</li>
+              </ul>
+            </div>
+          </a>
+        </article>
+
         <article class="card">
           <a class="card-link" href="projects.html" target="_blank" rel="noopener">
-            <img src="images/project1.jpg" alt="Screenshot of Project 1" loading="lazy" />
+            <img src="images/project2.jpg" alt="Screenshot of Research Article" loading="lazy" />
             <div class="card-body">
-              <h3>Project Sprint – Method & Workshop</h3>
-              <p>Practice-driven project OS for teams; facilitation toolkit and training.</p>
-              <ul class="meta"><li>2024–2025</li><li>Role: Lead</li></ul>
+              <h3>Article: Resonance & Projects</h3>
+              <p>How resonance becomes structure; bridging Barad and Luhmann.</p>
+              <ul class="meta"><li>Journal preprint</li><li>2025</li></ul>
             </div>
           </a>
         </article>
@@ -170,12 +182,23 @@
     </section>
     
     <section id="contact">
-        <h2>Say hello!</h2>
-        <ul class="list">
-        <li>Email: <a href="mailto:you@example.com">you@example.com</a></li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile/" target="_blank" rel="noopener">linkedin.com/in/yourprofile</a></li>
-        </ul>
+      <h2>Let's get in touch</h2>
+
+      <div class="contact-icons">
+        <a href="mailto:yagi.shotaro@copilot.jp" class="contact-icon" title="Email">
+          <img src="images/icon-email.png" alt="Email icon">
+        </a>
+
+        <a href="https://www.linkedin.com/in/shotaro-yagi-715849183/" 
+          class="contact-icon" 
+          target="_blank" 
+          rel="noopener" 
+          title="LinkedIn">
+          <img src="images/icon-linkedin.svg" alt="LinkedIn icon">
+        </a>
+      </div>
     </section>
+  
   </main>
 
   <footer class="site-footer">
