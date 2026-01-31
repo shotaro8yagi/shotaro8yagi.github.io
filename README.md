@@ -1,3 +1,3 @@
 # shotaroyagi.github.io
 
-This is personal website. 
+This is a personal website. 
